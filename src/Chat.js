@@ -5,6 +5,7 @@ import StopRoundedIcon from '@material-ui/icons/StopRounded';
 import { selectImage } from './features/appSlice';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { db } from './firebase';
 import './Chat.css';
 
 
@@ -27,8 +28,9 @@ function Chat({ id, profilePic, username, timestamp, imageUrl, read }) {
         <Avatar className='chat__avatar' src={profilePic} />
         <div className="chat__info">
             <h4>{username}</h4>
-            <p>Tap to view - <ReactTimeago date={new Date(timestamp?.
-                toDate()).toUTCString()} />
+            <p>
+                {!read && "Tap to view -"}{" "} 
+                <ReactTimeago date={new Date(timestamp?.toDate()).toUTCString()} />
             </p>
         </div>
         {!read && <StopRoundedIcon className="chat__readIcon" />}

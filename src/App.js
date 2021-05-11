@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import WebcamCapture from './WebcamCapture';
 import Preview from './Preview';
 import Chats from './Chats';
+import ChatView from './ChatView';
 import './App.css';
 
 function App() {
