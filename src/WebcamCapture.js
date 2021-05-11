@@ -41,7 +41,7 @@ function WebcamCapture () {
             fontSize="large"    
         />
     </div>
-  )
+  );
 }
 
 export default WebcamCapture;

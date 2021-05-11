@@ -41,22 +41,30 @@ function App() {
           <Login />
         ) : 
         (
-        <div className="app__body">
-          <Switch>
-            <Route path="/chats/view">
-              <ChatView />
-            </Route>
-            <Route path="/chats">
-              <Chats />
-            </Route>
-            <Route path="/preview">
-              <Preview />
-            </Route>
-            <Route exact path="/">
-              <WebcamCapture />
-            </Route>
-          </Switch>
-        </div>
+          <>
+          <img className="app__logo" 
+               src="https://th.bing.com/th/id/OIP.HnuWGhX09YfGjyUQQjM_dwHaEK?w=289&h=180&c=7&o=5&dpr=1.25&pid=1.7" 
+               alt="SC" 
+          />
+          <div className="app__body">
+            <div className="app__bodyBackground">
+              <Switch>
+                <Route path="/chats/view">
+                  <ChatView />
+                </Route>
+                <Route path="/chats">
+                  <Chats />
+                </Route>
+                <Route path="/preview">
+                  <Preview />
+                </Route>
+                <Route exact path="/">
+                  <WebcamCapture />
+                </Route>
+              </Switch>
+            </div>
+          </div>
+        </>
         )
       }
      
