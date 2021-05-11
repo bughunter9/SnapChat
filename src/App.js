@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import WebcamCapture from './WebcamCapture';
 import Preview from './Preview';
 import Chats from './Chats';
 import ChatView from './ChatView';
@@ -10,6 +9,7 @@ import { login , logout , selectUser } from './features/appSlice';
 import { useSelector } from 'react-redux';
 import { auth } from './firebase';
 import './App.css';
+import WebcamCapture from "./WebcamCapture";
 
 function App() {
 
